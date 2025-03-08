@@ -10,7 +10,7 @@ on:
 jobs:
 
   focal_build_a5:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
 
     steps:
     - name: Checkout
@@ -20,7 +20,7 @@ jobs:
       run: |
         set -x
         sudo apt-get update
-        sudo apt install android-tools-mkbootimg build-essential ccache img2simg -y
+        sudo apt install android-tools-mkbootimg build-essential ccache img2simg python2 -y
         sudo ln -sf python2.7 /usr/bin/python
         ln -s deviceinfo-a5y17lte deviceinfo
         sudo wget https://raw.githubusercontent.com/LineageOS/android_system_tools_mkbootimg/lineage-19.1/mkbootimg.py -O /usr/bin/mkbootimg
@@ -43,7 +43,7 @@ jobs:
           out/recovery.img
           
   focal_build_a7:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
 
     steps:
     - name: Checkout
@@ -53,7 +53,7 @@ jobs:
       run: |
         set -x
         sudo apt-get update
-        sudo apt install android-tools-mkbootimg build-essential ccache img2simg -y
+        sudo apt install android-tools-mkbootimg build-essential ccache img2simg python2 -y
         sudo ln -sf python2.7 /usr/bin/python
         sudo wget https://raw.githubusercontent.com/LineageOS/android_system_tools_mkbootimg/lineage-19.1/mkbootimg.py -O /usr/bin/mkbootimg
         sudo chmod 755 /usr/bin/mkbootimg
@@ -76,7 +76,7 @@ jobs:
           out/recovery.img
 
   droidian_build_a5:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
 
     steps:
     - name: Checkout
@@ -86,7 +86,7 @@ jobs:
       run: |
         set -x
         sudo apt-get update
-        sudo apt install android-tools-mkbootimg build-essential ccache img2simg -y
+        sudo apt install android-tools-mkbootimg build-essential ccache img2simg python2 -y
         sudo ln -sf python2.7 /usr/bin/python
         sudo wget https://raw.githubusercontent.com/LineageOS/android_system_tools_mkbootimg/lineage-19.1/mkbootimg.py -O /usr/bin/mkbootimg
         sudo chmod 755 /usr/bin/mkbootimg
@@ -105,7 +105,7 @@ jobs:
           out/*.tar.xz
           
   droidian_build_a7:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
 
     steps:
     - name: Checkout
@@ -115,7 +115,7 @@ jobs:
       run: |
         set -x
         sudo apt-get update
-        sudo apt install android-tools-mkbootimg build-essential ccache img2simg -y
+        sudo apt install android-tools-mkbootimg build-essential ccache img2simg python2 -y
         sudo ln -sf python2.7 /usr/bin/python
         sudo wget https://raw.githubusercontent.com/LineageOS/android_system_tools_mkbootimg/lineage-19.1/mkbootimg.py -O /usr/bin/mkbootimg
         sudo chmod 755 /usr/bin/mkbootimg
