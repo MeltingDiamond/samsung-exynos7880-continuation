@@ -1,6 +1,6 @@
 # Ubuntu Touch device tree for Samsung Exynos7880
 
-
+Use this at your own risk. I only test the a5y17lte build
 
 ## How to build
 
